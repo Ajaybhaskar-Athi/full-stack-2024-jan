@@ -66,6 +66,7 @@
 
 
 <!-- 33333333333333333333333333333333333333333-->
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,4 +105,70 @@
     </table>
     
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+
+<body>
+
+    <form action="/submit" method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
+        <!-- Text Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3" maxlength="50" placeholder="Enter your name">
+        <br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Enter your password">
+        <br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+        <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+        <br>
+
+        <!-- Checkbox -->
+        <label for="subscribe"><input type="checkbox" id="subscribe" name="subscribe" checked> Subscribe to
+            newsletter</label>
+        <br>
+
+        <!-- Dropdown Select -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select>
+        <br>
+
+        <!-- Textarea -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea>
+        <br>
+
+        <!-- File Input -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
 </html>
