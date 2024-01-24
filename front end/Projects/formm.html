@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <form action="/action" method="get" target="_blank">
+
+        <input type="text" name="fname" id="fnameid" placeholder="FirstName">
+
+        <input type="text" name="lname" id="lnameid" placeholder="LastNamw">
+
+
+        <br>
+        < <div>Please Select Your Gender
+            <select name="gender" id="genderid">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            </div>
+            <br>
+            <!-- <label for="gen">Gender</label>
+        <input type="radio" name="gen" id="male" value="Male">male
+        <input type="radio" name="gen" id="female" value="female">female -->
+
+            <div>
+                do yo agree to all terms of service?
+                <input type="checkbox" name="agree" id="agreeid" checked>
+                <label for="agree">Yes,i agreee</label>
+            </div>
+
+            <label for="volume">Volume</label>
+            <input type="range" min="0" max="100">
+            <button>Register</button>
+    </form>
+
+</body>
+
+</html>

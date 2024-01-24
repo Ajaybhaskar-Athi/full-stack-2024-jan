@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+
+    <p id="demo">Good Evening!</p>
+
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "good day";
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+
+    <p id="demo">Good Evening!</p>
+
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            default:
+                console.log("Invalid Input");
+        }
+        document.getElementById("demo").innerHTML = "Today is" + day;
+    </script>
+</body>
+
+</html> -->
+<!-- 
+
+
+
+//////////////////////2222222222222222222222222222222222222222222222222222222222222222222222222
+/////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="hai"> </p> -->
+<!-- <script>
+        var i = 0;
+        for (i = 0; i <= 10; i++) {
+            if (i == 5) break;
+            document.write("The number is " + i);
+            // console.log(i);
+            document.write("<br />");
+        }
+    </script> -->
+<!-- <script type="text/JavaScript">
+        const cars = ["BMW", 'volvo', 'Saab', "ford"];
+        let i = 0;
+        let text = "";
+        while (cars[i]) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+        document.getElementById("hai").innerHTML = text;
+        document.write(text);
+    </script> -->
+
+<!-- Repeat with DO WHILE also; -->
+<!-- <button onclick="dis()"> try it</button>
+
+    <script>
+        let a;
+        function dis() {
+            // document.write("hello Good Mornig");
+            // alert("good morning");
+            a = prompt("enter your name");
+            // console.warn("hai this is " + a);
+            document.write("Good morining ", parseInt(a));
+
+        }
+    </script> -->
+<!-- 
+    <p>click the button to call the function</p>
+    <br>
+    <button onclick="fun()">try it</button>
+    <p id="hai"></p>
+    <script type="text/JavaScript">
+        let a=new Date().getDay()
+        let day;
+        function fun(a) {
+            if(a==2){
+day="tuesday";
+            }
+            document.getElementById("hai").innerHTML = day;
+        }
+
+    </script> -->
+
+
+<!-- 
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+    <p id="demo"></p>
+    <!-- <script>
+        let fr = ["apple", "banana", "mango", 'grapes'];
+        let flen = fr.length;
+        let text = "<ul>";
+        for (let i = 0; i < flen; i++) {
+            text += "<li>" + fr[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+
+
+    <!-- 
+    <script type="text/JavaScript">
+       var size = parseInt(prompt("enter the size of array:"));
+var arr = [];
+let text="<ul>"
+for (var i = 0; i < size; i++) {
+    var s = prompt("enter the elements of array");
+    arr.push(parseInt(s));
+}
+console.log("array elements");
+for (var i = 0; i < size; i++) {
+    console.log(arr[i]);
+    // document.write(arr[i]+"<br>")
+    text+="<li>"+arr[i]+"</li>";
+
+}
+text+="</ul>";
+document.getElementById("demo").innerHTML=text; 
+
+
+
+
+    </script>-->
+
+
+    <script>
+        const girls = ["akshya", 'sandhya', "kushi"];
+        let boys = ["ajay", 'hemanth', 'pranav'];
+        let mychild = girls.concat(boys);
+        document.getElementById("demo").innerHTML = mychild;
+    </script>
+
+</body>
+
+</html>
