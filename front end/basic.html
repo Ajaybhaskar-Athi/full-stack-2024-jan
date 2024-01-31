@@ -440,3 +440,132 @@
 </body>
 
 </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            background-color: #f0f2f5;
+
+        }
+
+        .login {
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px gray;
+            display: inline-block;
+            margin-top: 50px;
+            margin-left: 580px;
+            text-align: center;
+            background-color: white;
+
+        }
+
+        /* .login {
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px gray;
+            
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+       
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            max-width: 400px;
+         
+            width: 100%;
+        
+        } */
+
+
+
+        #login-btn {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            margin-top: 15px;
+            padding: 0 16px;
+            width: 360px;
+
+        }
+
+        #number,
+        #password {
+            border: 1px solid #1877f2;
+            border-radius: 5px;
+            margin-top: 12px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            padding: 16px 14px;
+            width: 332px;
+
+        }
+
+        .forgot-password {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .create-btn {
+            background-color: #42b72a;
+            border: none;
+            padding: 0 16px;
+            color: white;
+            width: px;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            margin-bottom: 20px;
+            font-family: arial, sans-serif;
+
+        }
+
+        .logo {
+            color: #1877f2;
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="logo">facebook</h1>
+
+    <div class="login">
+
+
+        <div class="box">
+            <input id="number" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4} " placeholder="Email or Phone number"><br>
+            <input type="password" name="" id="password" placeholder="password"><br>
+            <button id="login-btn">Log in</button><br>
+            <p><a class="forgot-password" href="">Forgetten password?</a></p><br>
+            <button class="create-btn">Create new account</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

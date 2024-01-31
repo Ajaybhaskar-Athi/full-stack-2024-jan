@@ -1,0 +1,615 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+
+    <p id="demo">Good Evening!</p>
+
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "good day";
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+
+    <p id="demo">Good Evening!</p>
+
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            default:
+                console.log("Invalid Input");
+        }
+        document.getElementById("demo").innerHTML = "Today is" + day;
+    </script>
+</body>
+
+</html> -->
+<!-- 
+
+
+
+//////////////////////2222222222222222222222222222222222222222222222222222222222222222222222222
+/////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="hai"> </p> -->
+<!-- <script>
+        var i = 0;
+        for (i = 0; i <= 10; i++) {
+            if (i == 5) break;
+            document.write("The number is " + i);
+            // console.log(i);
+            document.write("<br />");
+        }
+    </script> -->
+<!-- <script type="text/JavaScript">
+        const cars = ["BMW", 'volvo', 'Saab', "ford"];
+        let i = 0;
+        let text = "";
+        while (cars[i]) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+        document.getElementById("hai").innerHTML = text;
+        document.write(text);
+    </script> -->
+
+<!-- Repeat with DO WHILE also; -->
+<!-- <button onclick="dis()"> try it</button>
+
+    <script>
+        let a;
+        function dis() {
+            // document.write("hello Good Mornig");
+            // alert("good morning");
+            a = prompt("enter your name");
+            // console.warn("hai this is " + a);
+            document.write("Good morining ", parseInt(a));
+
+        }
+    </script> -->
+<!-- 
+    <p>click the button to call the function</p>
+    <br>
+    <button onclick="fun()">try it</button>
+    <p id="hai"></p>
+    <script type="text/JavaScript">
+        let a=new Date().getDay()
+        let day;
+        function fun(a) {
+            if(a==2){
+day="tuesday";
+            }
+            document.getElementById("hai").innerHTML = day;
+        }
+
+    </script> -->
+
+
+<!-- 
+</body>
+///////////////////////////////////////////////////////////////////////
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript</h2>
+    <p id="demo"></p> -->
+<!-- <script>
+        let fr = ["apple", "banana", "mango", 'grapes'];
+        let flen = fr.length;
+        let text = "<ul>";
+        for (let i = 0; i < flen; i++) {
+            text += "<li>" + fr[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+
+
+<!-- 
+    <script type="text/JavaScript">
+       var size = parseInt(prompt("enter the size of array:"));
+var arr = [];
+let text="<ul>"
+for (var i = 0; i < size; i++) {
+    var s = prompt("enter the elements of array");
+    arr.push(parseInt(s));
+}
+console.log("array elements");
+for (var i = 0; i < size; i++) {
+    console.log(arr[i]);
+    // document.write(arr[i]+"<br>")
+    text+="<li>"+arr[i]+"</li>";
+
+}
+text+="</ul>";
+document.getElementById("demo").innerHTML=text; 
+
+
+
+
+    </script>-->
+
+<!-- 
+    <script>
+        const girls = ["akshya", 'sandhya', "kushi"];
+        let boys = ["ajay", 'hemanth', 'pranav'];
+        let mychild = girls.concat(boys);
+        document.getElementById("demo").innerHTML = mychild;
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- Day 3 -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <p>hai im ajay</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script type="text/javascript">
+        // let emp = { id: 31141, name: "Ajay Bhaskar", age: 40 }
+        // document.write(emp.id + " " + emp.name + " " + emp.age);
+        // // console.log(emp.id + " " + emp.name + " " + emp.age);
+        // alert(emp.id + " " + emp.name + " " + emp.age);
+
+        // 2nd way to write objects
+
+        // as we know js is a case sensitive write capital O to create Object
+        // var emp = new Object();
+        // emp.name = "Akshaya varma";
+        // emp.id = 101;
+        // emp.salary = 50900;
+        // document.write(emp.id + " " + emp.name + " " + emp.salary);
+
+
+
+
+        // 3rd way to write objects
+
+        // const person = {
+        //     fName: "ajay",
+        //     lName: "bhaskar",
+        //     id: 908,
+        //     fullName: function () {
+        //         return this.fName + " " + this.lName;
+        //     }
+
+        // };
+        // document.getElementById("demo").innerHTML = person.fullName();
+
+
+        //ARRAYS
+        // 111
+        // const arr = [1, 23, 12, 43];
+        // let pos = arr.indexOf(23) + 1;
+        // document.getElementById("demo").innerHTML = "23 is found at position " + pos;
+
+        // 22222
+
+        // var emp = ["z", 'b', 'f', 'u'];
+        // document.getElementById("demo").innerHTML = emp;
+        // emp.sort();
+        // document.getElementById("demo1").innerHTML = emp;
+        // document.write(emp);
+
+        // var emp = [1, 2, 3, 4, 5];
+        // var dup = emp.slice(1, 3);
+        // document.write(dup + "<br/>")
+        // let cut = emp.splice(2, 1, 23, 45, 67);
+
+        // document.write(emp);
+
+        /////////////////////////
+    </script>
+      
+ 
+</body>
+
+</html>
+-->
+
+
+<!-- ////////////////////////////////// -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout function</title>
+</head>
+
+<body>
+    <script>
+        function delayFunction() {
+            document.write('<h3> welcome to java point <h3>');
+        }
+    </script>
+
+
+    <button on click="setTimeout(delayFunction, 3000)">Click here</button>
+</body> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back functions</title>
+    //calling a function and in that function a new one is ca;lled acc to provided arguments    
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        function display(something) {
+            document.getElementById("demo").innerHTML = something;
+        }
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+        myCalculator(5, 5, display);
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!-- /////EXCEPTION HANDLING IN JS -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+
+<body>
+    <script>
+        try {
+            var a = ["34", "32", "5", "31", "24"]
+            document.getElementById("demo").innerHTML
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("hello");
+
+        // setTimeout(function () {
+        //     console.log("LPU");
+        // }, 1000);
+
+        setTimeout(() => {
+            console.log("LPU");
+        }, 2000);
+        console.log("welcome to");
+        console.log("welcome to");
+        console.log("welcome to");
+        console.log("welcome to");
+        console.log("welcome to");
+    </script>
+
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+ 
+    <p id="demo2"></p>
+    <hr>
+
+     <script>
+        function waitAndshow() {
+            var newd = new Date();
+            document.getElementById("demo").innerhtml = newd.toLocaleTimeString();
+        }
+        setInterval(waitAndshow, 4000);
+    </script>
+    <h3>updated time will show in every 4 seconds</h3>
+    <h3>the current time in your computer is : <br> <span id="demo"></span></h3> 
+    <script>
+        const fruits = ["orange", "mango", "apple", "grapes"];
+        // document.getElementById("demo1").innerHTML = fruits;
+        // fruits.sort();
+        // let ress = fruits.reduce((res, ele) => (res + " " + ele)
+
+        // )
+        // document.getElementById("demo2").innerHTML = ress;
+        // let result = fruits.reduce((res, fruits) => (res + fruits))
+
+        // document.getElementById("demo3").innerHTML = result;
+        // let res = fruits.forEach((ele) => {
+        //     document.write(ele + "</br>");
+        // }
+        // )
+        // document.getElementById("demo1").innerHTML = res;
+        // const arr = [1, 2, 3, 4, 5];
+        // let double = arr.map((ele) => ele * 2)
+        // document.getElementById("demo2").innerHTML = ` original array:${arr} </br>
+        // doubled array: ${double}`;
+
+    </script>
+
+</body>
+
+</html> -->
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .box {
+            border: 1px solid black;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let para1 = document.createElement('p');
+        para1.innerText = "hey im red";
+        document.querySelector('body').append(para1);
+        para1.classList.add("red");
+
+        let h3 = document.createElement('h3');
+        h3.innerHTML = "I am a blue h3!";
+        // document.querySelector('body').appendChild(h3);
+        para1.insertAdjacentElement('beforebegin', h3);
+        h3.classList.add("blue");
+
+        let div = document.createElement('div');
+        let h1 = document.createElement('h1');
+        let p = document.createElement('p');
+        h1.innerText = "iM in div ";
+        p.innerText = "me too!";
+        div.append(h1);
+        div.append(p);
+        div.classList.add('box');
+        document.querySelector('body').prepend(div);
+    </script>
+
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btnstyle {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let inp = document.createElement("input");
+        let btn = document.createElement("button");
+        btn.innerHTML = "click me!";
+        let body = document.querySelector("body");
+        body.append(inp);
+        body.append(btn);
+
+
+        // inp.style.border = "2px solid black ";
+        btn.setAttribute("id", "button");
+        inp.setAttribute("placeholder", "username");
+
+        let butt = document.querySelector("#button");
+        butt.classList.add("btnstyle");
+
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "DOM practice";
+        h1.style.color = "purple";
+        body.append(h1);
+
+        let p = document.createElement("p");
+        p.innerHTML = "Apna college Delta Practice";
+        p.style.fontWeight = "bold";
+        body.append(p);
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>click me</button>
+    <button>clcik me2</button><button> clicke me 3</button><button>clcike me4</button>
+
+    <script>
+        let btn = document.querySelectorAll("button");
+        console.dir(btn);
+        for (ele of btn) {
+            ele.onclick = hello;
+            // ele.onclick = name;
+        }
+
+        // btn.onclick = hello;
+        function hello() {
+            alert("Hello");
+        }
+
+        function name() {
+            window.alert("lpu");
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo">this is a paragraph</p>
+    <div class="box">
+        <!-- <p style="color: black;"></p> -->
+    </div>
+
+    <script>
+        let p = document.getElementById("demo");
+        let box = document.querySelector(".box");
+        box.addEventListener("mouseenter", function () {
+            console.log("mouse hovered");
+            let div = document.querySelector("div");
+            div.innerText = Math.floor(Math.random() * 100);
+        })
+    </script>
+</body>
+
+</html>

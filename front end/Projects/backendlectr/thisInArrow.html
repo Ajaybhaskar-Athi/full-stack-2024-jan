@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function lpu() {
+            console.log("lpu");
+        }
+        const lpu2 = function () {
+            console.log("lpu");
+        }
+        const lpu3 = () => { console.log("lpu"); }
+        setTimeout(lpu3, 2000);
+        console.log("hai");
+        console.log("welcome to");
+
+    </script> -->
+
+    <script>
+        const stud = {
+            name: "akshaya", roll: 21, prop: this,
+            getName: function () {
+                return this.name;
+            },
+            getMarks: () => {
+                return this.marks;
+            },
+            getInfo1: function () {
+                setTimeout(() => {
+                    console.log(this);
+                }, 2000);
+            },
+            getInfo2: () => {
+                setTimeout(function () {
+                    console.log(this);
+                }, 2000);
+
+            }
+
+        }
+        // console.log(getInfo1);
+        // console.log(stud.getName());
+        // console.log(stud.getMarks());
+        // const s = "ajay";
+        // console.log(this.s);
+
+    </script>
+</body>
+
+</html>
