@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>TUDO game</h3>
+    <input type="text" placeholder="Enter your Tasks">
+    <button>Add tasks</button>
+    <ul>
+        <li>Eat<button class="delete">Delete</button></li>
+        <li>Sleep <button class="delete">Delete</button></li>
+        <li> meditation <button class="delete">Delete</button></li>
+    </ul>
+    <script>
+        let inp = document.querySelector("input");
+        let btn = document.querySelector("button");
+        let ul = document.querySelector("ul");
+        // let lis=document.querySelector
+        btn.addEventListener("click", function (event) {
+            let li = document.createElement("li");
+            li.innerText = inp.value;
+
+            let delbtn = document.createElement("button");
+            delbtn.classList.add("delete");
+            delbtn.innerText = "Delete";
+            li.appendChild(delbtn);
+            ul.append(li);
+            inp.value = "";
+        });
+
+
+        // let delbtns = document.querySelectorAll(".delete");
+        // for (delbtn of delbtns) {
+        //     delbtn.addEventListener("click", () => {
+        //         let par = delbtn.parentElement;
+        //         // console.log(par);
+        //         par.remove();
+        //     });
+        //but it was not delteing the newly added one 
+        // }
+
+        //Event Delegation: based on event bubbling
+
+        ul.addEventListener("click", function (event) {
+            if (event.target.nodeName == "BUTTON") {
+                let listItem = event.target.parentElement;
+                listItem.remove();
+                // console.log(listItem);
+            }
+        });
+    </script>
+</body>
+
+</html>

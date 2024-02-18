@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function logMovies() {
+            const response = await fetch('https://catfact.ninja/fact');
+            const movies = await response.json();
+            console.log(movies.fact);
+        }
+        logMovies();
+
+        let url = 'https://catfact.ninja/fact';
+        fetch(url)
+            .then((res) => {
+                console.log(res);
+                res.json()
+                    .then((data) => {
+                        console.log(data.fact);
+                        return fetch(url);
+                    })
+                    .then((data1) => {
+                        console.log(data1.fact);
+                    })
+
+            })
+        // .then((data)=>{
+        //     console.log("data 1: ",data.fact);
+        //     return fetch(url);
+        // })
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>API that gives u the details of colleges in respective countries</h3>
+    <input type="text" placeholder="Enter country Name">
+    <button >Show Details</button>
+    <p id="res"></p>
+<script>
+    let url="http://universities.hipolabs.com/search?name=";
+    let btn=document.querySelector("button");
+
+    btn.addEventListener("click",async ()=>{
+        let country=document.querySelector("input").value;
+        console.log(country);
+        getColleges(country);
+    });
+
+    async function getColleges(country){
+        try{
+            let res=await axios.get(url+country);
+            console.log(res.data);
+        }
+        catch(e){
+            console.log("error: ",e);
+            return [];
+        }
+    }
+</script>
+</body>
+</html>

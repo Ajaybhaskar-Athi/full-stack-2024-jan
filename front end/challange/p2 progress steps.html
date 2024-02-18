@@ -1,0 +1,176 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            text-align: center;
+        } */
+        body {
+            margin-top: 40vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+
+        }
+
+        .c1 {
+            border: 1px solid black;
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            font-size: xx-small;
+        }
+
+        .line1 {
+            border: 2px solid whitesmoke;
+            width: 30px;
+        }
+
+
+        .btn {
+            border: 1px solid black;
+            height: 20px;
+            width: 60px;
+            margin: 10px 15px 0 20px;
+            background-color: whitesmoke;
+            /* color: whitesmoke; */
+        }
+
+
+
+
+        .next {
+            background-color: rgb(10, 10, 247);
+        }
+
+        .btn:active {
+            background-color: whitesmoke;
+        }
+
+        .activec {
+            border-color: rgb(10, 10, 247);
+        }
+
+        .activel {
+            border-color: rgb(10, 10, 247);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="c1 activec">
+            1</div>
+        <div class="line1 " id="1"></div>
+        <div class="c1 ">2</div>
+        <div class="line1" id="2"></div>
+        <div class="c1">3</div>
+        <div class="line1" id="3"></div>
+        <div class="c1">4</div>
+    </div>
+
+
+    <div class="container">
+        <button class="btn">Prev</button>
+        <button class="btn next">Next</button>
+    </div>
+
+
+    <script>
+        let btns = document.querySelectorAll("button");
+        console.log(btns);
+        btns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                if (btn.innerHTML === "prev") {
+                    btn.classList.remove("activel");
+                }
+                else {
+                    btn.classList.add("activel")
+                }
+            });
+        })
+
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Steps</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6f7fb;
+            font-family: 'Roboto', "sans-serif";
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 30px;
+            max-width: 100%;
+            width: 350px;
+        }
+
+        .progress {
+            background-color: #3498db;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <button class="btn" id="prev" disabled>Prev</button>
+        <!-- disbaled since in starting it not possible to go back to previuos -->
+        <button class="btn" id="next">Next</button>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,12 +55,12 @@ initial-scale=1.0" />
 <body>
     <h1 id="mainTopic">CSS Practice</h1>
     <h3>Let's learn about selector.</h3>
-    <!-- Paragraph1 -->
+ 
     <div class="psyle">
         <p>There are multiple selectors in css.</p>
-        <!-- Paragraph2 -->
+     
         <p>Some of them include class selector, id selector etc.</p>
-        <!-- Paragraph3 -->
+       
         <p>And we can also combine these too.</p>
     </div>
     <div>
@@ -70,6 +70,258 @@ initial-scale=1.0" />
         <br />
         <button>Learn next!</button>
     </div>
+</body>
+
+</html> -->
+
+
+<!-- //////////111111111111111111111111111111111111 -->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// get and set are keywords that will return and set the values in an Object
+
+        const person = {
+            name: "ajay",
+            age: "20",
+            marks: 90,
+            set setter(m) {
+                this.marks = m;
+            },
+            show: function () {
+                document.write("<br/>" + this.name + " " + this.age);
+                console.log("hai");
+            },
+            get getter() {
+                return this.name;
+            }
+            // getter: function () {
+            //     document.write(this.name, this.age);
+            // }
+            // , setter: function (na, ag) {
+            //     this.age = ag;
+            //     this.name = na;
+            // },
+            // setMarks: function (m) {
+            //     this.marks = m;
+            // }
+        }
+        // person.phoneNumber = 9988673214;
+        // document.write(person.phoneNumber);
+        // person["name"] = "chandu";
+        // person.show();
+        // document.write(person["name"] + "<br>");
+        // // person["getter"()];
+        // person.getter();
+        // person.setter("akshyaa", 20);
+        // person.setMarks 
+        // document.write(person.marks);
+        // person.setter = ["akshaya ","20"];
+        // person.show();
+
+        person.setter= 98;
+        let nameOf = person.getter;
+        document.write(person.marks + " " + nameOf);
+    </script>
+</body>
+
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hai {
+            color: red;
+        }
+
+        .oyy {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="one">Click me</button>
+    <button id="two" ,onmouseout="fun2()"> Submit</button>
+    <input type="text" id="three" onkeyup="funn3()">
+    <p id="four"></p>
+    <script>
+        function funn3() {
+            let para = document.getElementById("three").value;
+            document.getElementById("four").innerHTML = para;
+
+        }
+        function fun() {
+            let btn = document.querySelector("button");
+            // btn.classList.add("hai");
+            // or
+            // document.getElementById("one").style.color=red;
+
+        }
+        function fun2() {
+            document.getElementById("two").style.color = "orange";
+        }
+
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", () => {
+            // btn.style.color = "yellow";
+            btn.classList.add("oyy");
+        })
+
+
+    </script>
+</body>
+
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="fun()">
+    <script>
+        function fun(){  
+            window.alert("hai");
+        } 
+        
+        // let body = document.querySelector("body");
+        // body.setAttribute("onload", () => {
+        //     document.write("Website loaded");
+        // }
+        // )
+    </script>
+</body>
+
+</html>
+
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+    // const arr=[1,2,3,4];
+    // arr.push(89);
+    // arr.unshift(90);
+    // arr.forEach((ele)=>{
+    //     document.write(ele+" ");
+    // })
+
+
+let para=document.querySelectorAll('p');
+console.log(para.length);
+    </script>
+</body>
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hai {
+            background-color: red;
+        }
+
+        .oyy {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p">click this paragraph to change by dom
+
+    </p>
+    <p class="pp"> click this para to change the body color by DOM after 2 sec</p>
+
+    <button>count P's</button>
+    <h6></h6>
+
+    <button id="btn2">Chnage All P's to orange</button>
+<br><label for="num1">Number1</label>
+    <input type="number" name="num1" id="num1"><br>
+    <label for="num2">Number2</label>
+    <input type="number" name="num2" id="num2">
+    <br><button id="btn3">Add both</button>
+    <script>
+        let p = document.getElementById("p");
+        p.addEventListener("click", () => {
+            p.innerHTML = "para changed using dom";
+        })
+        let pp = document.getElementsByClassName("pp")[0];
+        let body = document.querySelector("body");
+        pp.addEventListener("click", () => {
+            setTimeout(() => {
+                body.classList.add("hai");
+            }, 2000);
+        })
+
+        let btn = document.querySelector("button");
+        let count = document.querySelectorAll("p");
+        btn.addEventListener("click", () => {
+           
+            let h6 = document.querySelector("h6");
+            h6.innerHTML = "there are " + count.length + " P's in this page.";
+        })
+
+
+        let allp = document.querySelectorAll('p');
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click", () => {
+            for (p of allp) {
+                p.classList.add("oyy");
+            }
+        })
+
+        let btn3=document.getElementById("btn3");
+btn3.addEventListener("click",()=>{
+    let num1 = Number(document.querySelector("#num1").value);
+     let num2 = Number(document.querySelector("#num2").value);
+       let newp = document.createElement("p");
+     newp.innerHTML = "sum of input 1 and input 2 is: " + (num1 + num2);
+     body.append(newp);
+    
+})
+    
+
+    </script>
 </body>
 
 </html>

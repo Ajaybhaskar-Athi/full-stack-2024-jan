@@ -1084,7 +1084,7 @@ initial-scale=1.0" />
 </body>
 
 </html> -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1214,6 +1214,34 @@ initial-scale=1.0" />
 
         </div>
     </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="button" onclick="fun()" value="click me"> -->
+    <script>
+        // function fun() {
+        //     document.write("this is the info i got after clickine the button");
+        // }
+        // let a = 10;
+        function rec(a) {
+            if (a <= 10) {
+                document.write(a + "<br>");
+                rec(a + 1);
+            }
+        }
+        rec(1);
+    </script>
 </body>
 
 </html>
