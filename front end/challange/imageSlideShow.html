@@ -1,0 +1,157 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        /* padding: 0 40px 0 100px; */
+        margin: 0 auto;
+        padding-left: 250px;
+        background-size: contain;
+        /* Cover the entire container */
+        background-position: center;
+        /* Center the image within the container */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        height: 110vh;
+        width: 60%;
+    }
+</style>
+
+<body>
+
+    <div>
+        <img src="" alt="Slideshow">;
+    </div>
+    <script>
+        const imageUrls = [
+            "https://www.onmanorama.com/content/dam/mm/en/entertainment/entertainment-news/images/2023/11/9/samantha-ruth.jpg.transform/845x440/image.jpg",
+            "https://wallpapercave.com/wp/wp4004030.jpg",
+            "https://th.bing.com/th/id/R.3269a3cef5fb321347d6eb3e2916b595?rik=bf3fwWXaYlqKMg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-v9jWizqho3g%2fUT_afsR8SMI%2fAAAAAAAAAbM%2fTMAoqIJ_ZRI%2fs1600%2fsamantha-in-eega.jpg&ehk=ABRC34h3WJczOt8pVMwZaVRdk%2bDXbZZw4XJ0%2fM70cIk%3d&risl=&pid=ImgRaw&r=0"
+        ];
+        let img = document.querySelector("img");
+        let c = 0;
+        function fun() {
+
+            if (c >= 3) c = 0;
+            img.setAttribute("src", imageUrls[c++]);
+        }
+        setInterval(fun, 1000);
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SlideShow</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #box {
+            position: relative;
+            top: 20;
+            height: 80%;
+            width: 60%;
+            /* background-color: red; */
+            background-image: url('https://th.bing.com/th/id/R.76312dfb95d1c1bdb1dec80fd71fa45f?rik=u9WkKnH%2bZTi%2fpg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fHD-Peaceful-Backgrounds.jpg&ehk=VI7X2ZKR%2bgNtV0t5oSJfEcz%2fLs7ugAhZZDw5il%2fOg3I%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover;
+            /* object-fit: cover; */
+        }
+
+        #inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 30px;
+            height: 60px;
+            width: 100px;
+            background-color: orange;
+            background-image: url('https://th.bing.com/th/id/R.76312dfb95d1c1bdb1dec80fd71fa45f?rik=u9WkKnH%2bZTi%2fpg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fHD-Peaceful-Backgrounds.jpg&ehk=VI7X2ZKR%2bgNtV0t5oSJfEcz%2fLs7ugAhZZDw5il%2fOg3I%3d&risl=&pid=ImgRaw&r=0');
+            /* object-fit:cover ; */
+            background-size: cover;
+
+        }
+
+        #one:hover,
+        #two:hover {
+            transform: scale(1.3);
+            border-radius: 20%;
+            border-color: black;
+        }
+
+        #One {
+
+            position: relative;
+            left: -40%;
+            background-color: #4A221A;
+        }
+
+        #two {
+            position: relative;
+            right: -40%;
+            background-color: #4A221A;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"> </div>
+    <div id="inner">
+        <button id="one"></button>
+        <button id="two"></button>
+    </div>
+    <script>
+        let inner = document.getElementById("inner");
+        let btn1 = document.getElementById("one");
+        let btn2 = document.getElementById("two");
+        let box = document.getElementById("box");
+        const imgs = [
+            'https://th.bing.com/th/id/R.76312dfb95d1c1bdb1dec80fd71fa45f?rik=u9WkKnH%2bZTi%2fpg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fHD-Peaceful-Backgrounds.jpg&ehk=VI7X2ZKR%2bgNtV0t5oSJfEcz%2fLs7ugAhZZDw5il%2fOg3I%3d&risl=&pid=ImgRaw&r=0',
+            'https://images.hdqwalls.com/download/pubg-mobile-pinc-kp-1366x768.jpg',
+            'https://4.bp.blogspot.com/-e7BZt_Mjwew/Vtr2tL4TRXI/AAAAAAAAf4A/hcMRRVKUWu8/s1600/Ruhani%2BSharma.jpg',
+            'https://th.bing.com/th/id/R.084b39b38a26fc9eee1cd130c2129b21?rik=Px0uX4Dgq90w0Q&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fb%2f8%2fd%2f24906.jpg&ehk=f9VW7V3kaRhQUbHDGBRBQYl%2bbMJOaAlFl6RWW8UOGxc%3d&risl=&pid=ImgRaw&r=0',
+            'https://i.pinimg.com/originals/20/58/7f/20587ff33f0726349e9e8d74d1223ccc.jpg'
+        ];
+        let c = 0;
+
+        function left() {
+            c--;
+            if (c < 0) c = imgs.length - 1;
+            box.style.backgroundImage = `url(${imgs[c]})`;
+            inner.style.backgroundImage = `url(${imgs[c]})`;
+        }
+        function right() {
+            c++;
+            if (c >= imgs.length) c = 0;
+            box.style.backgroundImage = `url(${imgs[c]})`;
+            inner.style.backgroundImage = `url(${imgs[c]})`;
+
+        }
+        btn1.addEventListener("click", left);
+        btn2.addEventListener("click", right);
+    </script>
+
+
+
+
+</body>
+
+</html>

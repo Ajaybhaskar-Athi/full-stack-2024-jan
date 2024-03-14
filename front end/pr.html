@@ -1217,7 +1217,7 @@ initial-scale=1.0" />
 </body>
 
 </html> -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1228,7 +1228,7 @@ initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- <input type="button" onclick="fun()" value="click me"> -->
+    <input type="button" onclick="fun()" value="click me"> 
     <script>
         // function fun() {
         //     document.write("this is the info i got after clickine the button");
@@ -1241,6 +1241,91 @@ initial-scale=1.0" />
             }
         }
         rec(1);
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="name" id="name">
+    <input type="submit" value="submit" id="btn" disabled="disabled">
+
+    <br>
+    <h1>LPU</h1>
+    <p>HEy there </p>
+    <button id="btn1">prepend</button>
+    <button id="btn2">Append</button>
+
+    <br>
+    <h1>Lovely professional university <p>India</p>
+    </h1>
+    <h2>punjab</h2>
+    <img src="https://th.bing.com/th/id/OIP.Q05K882H_QqdBl0DQLNdVwHaE6?rs=1&pid=ImgDetMain" width="100px"
+        height="100px"><br>
+    <a href="https://www.lpu.in/" id='lpu'>click</a>
+    <button id="b1">Text</button>
+    <button id="b2">HTML</button>
+    <button id="b3">ATTRIBUTE</button>
+
+    <br>
+    <div style="background-color: blue;">
+        <p>HAI</p>
+        <p>HELLO</p>
+        <p> LPU</p>
+    </div>
+    <button id="empty">Empty </button>
+    <script>
+        $('#name').keyup(() => {
+            if ($("#name").val() != ' ') {
+                $('#btn').removeAttr('disabled');
+            }
+            else {
+                $('#btn').attr('disabled', 'disabled');
+            }
+        })
+        //br
+        $('#btn1').click(() => {
+            $('p').before("Hello");
+        })
+        $('#btn2').click(() => {
+            $('p').after("vizag");
+        })
+        //br
+        $(document).ready(() => {
+            $('#b1').click(() => {
+                alert($('h1').text());
+            })
+            $('#b2').click(() => {
+                alert($('h1').html());
+            })
+            $('#b3').click(() => {
+                alert($('#lpu').attr("href"));
+            })
+            $("img").click(() => {
+                alert($('#lpu').attr("href"));
+            })
+        })
+
+        //br
+        $(document).ready(() => {
+            $('#empty').click(() => {
+                $('div').empty();
+            })
+
+        })
+
+        //br
+        
     </script>
 </body>
 

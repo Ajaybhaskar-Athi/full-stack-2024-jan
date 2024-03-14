@@ -1,0 +1,253 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-direction: column;
+            /* display: inline; */
+        }
+
+        div {
+            width: 250px;
+            /* background-color: aliceblue; */
+            background-color: #3b5c9f;
+            ;
+            position: fixed;
+            top: 20px;
+            border: 2px solid rgb(185, 187, 215);
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            /* padding-bottom: 30px; */
+
+        }
+
+        .box {
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-bottom: 3px;
+            border: 1px dotted black;
+            border-radius: 2px;
+        }
+
+        button {
+            border: 2px solid;
+            position: relative;
+            width: 40%;
+            /* top: 10px; */
+            left: 25%;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            background-color: #316FF6;
+            border-color: #316FF6;
+            color: white;
+        }
+
+        h2 {
+            position: relative;
+            left: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit=" return validation()">
+        <div class="box">
+
+            <h2>Login page</h2>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="Roll">RollNo</label>
+            <input type="number" name="Roll" id="Roll">
+            <label for="place">Place</label>
+            <input type="text" name="place" id="place">
+            <button type="submit">Submit</button>
+
+        </div>
+    </form>
+
+    <script>
+
+        function validation() {
+            let a = document.querySelector("#name").value;
+            if (a == "") {
+                alert("please enter your name");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            /* background-color: red; */
+           /* position:fixed;
+           top: 200px;
+           left: 25%; */
+           height: 300px;
+        }
+        /* div{
+            position: fixed;
+             */
+        /* } */
+        #btn1,#btn2,#btn3{
+        border: 2px black;
+        margin-right: 10px;
+            width: 80px;
+            height: 30px;
+        }
+        .two{
+             padding-left: 35%;
+             padding-top: 10%;
+             display: flex;
+             flex-direction: row;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one"> 
+        <div>
+        <button id="btn1">Start</button>
+        <button id="btn2">Stop</button>
+        <button id="btn3">Reset</button>
+        <div class="two">
+            <p id="hr">00  </p> <p> : </p>
+            <p id="min">00</p><p>:</p>
+            <p id="sec">00</p>
+        </div>
+    </div>
+     
+    </div>
+    <script>
+        let btn1=document.querySelector("#btn1");
+        let btn2=document.querySelector("#btn2");
+        let btn3=document.querySelector("#btn3");
+        let p1=document.querySelector("#hr");
+        let p2=document.querySelector("#min");
+        let p3=document.querySelector("#sec");
+        let p4=document.querySelector("#ms");
+            let intervalId;
+            let count=0;
+            let hr=0;
+            let min=0;
+
+           
+function startTimer(){
+               intervalId= setInterval(()=>{
+                    count++;
+                    update();
+                },1)
+    }
+
+    function stop(){
+        clearInterval(intervalId);
+    }
+    function reset(){
+        clearInterval(intervalId);
+        count=0;
+        hr=0;
+        min=0;
+        update();
+    }
+ function update(){
+                if(count==60){min++;
+                    count=0;
+                }
+            if(min==60){
+                hr++;
+                min=0;
+            }
+
+                let secc=count<10?"0"+count:count;
+                let minn=min<10?"0"+min:min;
+               let hrr=hr<10?"0"+hr:hr;
+               p3.innerHTML=secc;
+               p2.innerHTML=minn;
+               p1.innerHTML=hrr;
+}
+
+
+
+        btn1.addEventListener("click",startTimer);
+    btn2.addEventListener("click",stop);
+    btn3.addEventListener("click",reset);
+
+
+
+
+        // let  c=0;
+        // let min=0;
+        // let hr=0;
+        // btn1.addEventListener("click",()=>{
+        //     // click();
+        //     let ms=0;
+        //     setInterval(()=>{
+        //         ms++
+        //         if(ms==999){
+        //             ms=0;
+        //         }
+        //         p4.innerHTML=ms;
+        //     },0.1)
+        //     setInterval(motion,1000);
+        // })
+        // function motion(){
+        //     c++;
+        //     if(c>=60){
+        //         p3.innerHTML="00";
+        //         c=0;
+        //         calc();
+           
+        //     }
+        //     else if(c<10){
+        //         p3.innerHTML="0"+c;
+        //     }
+        //     else p3.innerHTML=c;
+
+        //      }
+
+        //      function calc(){
+        //      min++;
+        //      if(min==60){
+        //         hr++;
+        //         min=0;
+        //         if(hr<10)p1.innerHTML='0'+hr;
+        //         else p1.innerHTML=hr;
+        //      }
+             
+        //         if(min<10)p2.innerHTML="0"+min;
+        //         else p2.innerHTML=min;
+             
+                
+        //      }
+
+       
+    </script>
+ 
+</body>
+</html>

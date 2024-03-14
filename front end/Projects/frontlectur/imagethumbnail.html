@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      margin-bottom: 20px;
+    }
+
+    .thumbnail-container {
+      display: flex;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gallery-container">
+    <div class="main-image">
+      <img id="mainImg"
+        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-30466,resizemode-75,msid-95819079/news/new-updates/samantha-looks-to-ayurveda-to-cure-autoimmune-condition-myositis.jpg"
+        alt="Main Image" height="200px" width="100px">
+    </div>
+    <div class="thumbnail-container" id="thumbnailContainer">
+      <img class="thumbnail" src="https://assets.eenadu.net/article_img/120224-hhvm-11.jpg" alt="Thumbnail 1"
+        onclick="changeImage('https://assets.eenadu.net/article_img/120224-hhvm-11.jpg')">
+      <img class="thumbnail"
+        src="https://images.ottplay.com/webstories/wp-content/uploads/2023/09/F5AIcNobEAAReYD-scaled.jpg"
+        alt="Thumbnail 2"
+        onclick="changeImage('https://images.ottplay.com/webstories/wp-content/uploads/2023/09/F5AIcNobEAAReYD-scaled.jpg')">
+      <img class="thumbnail"
+        src="https://m.media-amazon.com/images/M/MV5BN2M2ZTM2MzMtZGMzMy00Yzc2LWEwNTUtNTI4OGJiNzYwZTUxXkEyXkFqcGdeQXVyMTUyNjIwMDEw._V1_.jpg"
+        alt="Thumbnail 3"
+        onclick="changeImage('https://m.media-amazon.com/images/M/MV5BN2M2ZTM2MzMtZGMzMy00Yzc2LWEwNTUtNTI4OGJiNzYwZTUxXkEyXkFqcGdeQXVyMTUyNjIwMDEw._V1_.jpg')">
+      <!-- Add more thumbnails as needed -->
+    </div>
+  </div>
+
+  <script>
+    function changeImage(imageUrl) {
+      document.getElementById('mainImg').src = imageUrl;
+    }
+
+    // Optional: Preload images for smoother transition
+    const thumbnailImages = document.querySelectorAll('.thumbnail');
+    thumbnailImages.forEach(thumbnail => {
+      const imageUrl = thumbnail.getAttribute('src');
+      const image = new Image();
+      image.src = imageUrl;
+    });
+
+  </script>
+</body>
+
+</html>

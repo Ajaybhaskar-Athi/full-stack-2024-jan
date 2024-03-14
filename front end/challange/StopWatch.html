@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+           
+           height: 300px;
+        }
+      
+        #btn1,#btn2,#btn3{
+        border: 2px black;
+        margin-right: 10px;
+            width: 80px;
+            height: 30px;
+        }
+        .two{
+             padding-left: 35%;
+             padding-top: 10%;
+             display: flex;
+             flex-direction: row;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one"> 
+        <div>
+        <button id="btn1">Start</button>
+        <button id="btn2">Stop</button>
+        <button id="btn3">Reset</button>
+        <div class="two">
+            <p id="hr">00  </p> <p> : </p>
+            <p id="min">00</p><p>:</p>
+            <p id="sec">00</p>
+        </div>
+    </div>
+     
+    </div>
+    <script>
+        let btn1=document.querySelector("#btn1");
+        let btn2=document.querySelector("#btn2");
+        let btn3=document.querySelector("#btn3");
+        let p1=document.querySelector("#hr");
+        let p2=document.querySelector("#min");
+        let p3=document.querySelector("#sec");
+        let p4=document.querySelector("#ms");
+            let intervalId;
+            let count=0;
+            let hr=0;
+            let min=0;
+
+           
+function startTimer(){
+               intervalId= setInterval(()=>{
+                    count++;
+                    update();
+                },1)
+    }
+
+    function stop(){
+        clearInterval(intervalId);
+    }
+    function reset(){
+        clearInterval(intervalId);
+        count=0;
+        hr=0;
+        min=0;
+        update();
+    }
+ function update(){
+                if(count==60){min++;
+                    count=0;
+                }
+            if(min==60){
+                hr++;
+                min=0;
+            }
+
+                let secc=count<10?"0"+count:count;
+                let minn=min<10?"0"+min:min;
+               let hrr=hr<10?"0"+hr:hr;
+               p3.innerHTML=secc;
+               p2.innerHTML=minn;
+               p1.innerHTML=hrr;
+}
+
+
+
+        btn1.addEventListener("click",startTimer);
+    btn2.addEventListener("click",stop);
+    btn3.addEventListener("click",reset);
+
+</script>
+</body>

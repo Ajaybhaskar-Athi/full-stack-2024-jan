@@ -68,8 +68,11 @@
             <div class="btn orange" id="orange">3</div>
             <div class="btn blue" id="blue">4</div>
         </div>
+     
     </div>
-
+    <div class="line -three">
+        <p id="pi"></p>
+    </div>
 
     <script>
         let gameSeq = [];
@@ -133,6 +136,8 @@
             else {
                 h3.innerText = "GameOver!Press Any key to start";
                 let body = document.querySelector("body");
+                let p = document.getElementById("pi");
+                pi.innerText = "your score is : " + level;
                 // setTimeout(() => {
 
                 //     body.classList.add("red");

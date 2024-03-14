@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #75C0E0;
+		}
+
+		.upper {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.upper img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.lower {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.lower img {
+			height: 130px;
+			width: 100px;
+			/* Remove padding-right: 15px; */
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="upper">
+		<img id="main" src="https://wallpapercave.com/wp/wp4004030.jpg" alt="">
+	</div>
+	<div class="lower">
+		<img id="one" src="https://wallpaperaccess.com/full/1444012.jpg" alt="">
+		<img id='two'
+			src="https://1.bp.blogspot.com/-qBPuF-iJNcI/UGyIGZBBYCI/AAAAAAAAH7Y/vaQb-y_0ryQ/s1600/samantha-in-saree-wallpaper.jpg"
+			alt="">
+		<img id="three"
+			src="https://1.bp.blogspot.com/-I2DOzRsQoTA/UOXaC9ng_zI/AAAAAAAAC40/OOo3YClzEA4/s1600/samantha_actress_new_stills_6.jpg"
+			alt="">
+
+
+	</div>
+	<script>
+		let btn1 = document.getElementById("one");
+		let btn2 = document.getElementById("two");
+		let btn3 = document.getElementById("three");
+		let img = document.getElementById("main");
+		function update(event) {
+			img.setAttribute("src", event.target.src)
+		}
+		btn1.addEventListener("click", update);
+		btn2.addEventListener("click", update);
+		btn3.addEventListener("click", update);
+	</script>
+</body>
+
+</html>

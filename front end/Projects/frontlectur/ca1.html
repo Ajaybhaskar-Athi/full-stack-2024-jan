@@ -1,0 +1,544 @@
+<!-- //functions -->
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .bt{
+            background-color: orange;
+        } */
+    </style>
+</head>
+<body>
+    <p id="p">The Aditya Suurampalem</p>
+     document.getElemetByID -->
+<!-- <button onclick="fun()">Click me</button> -->
+<!-- <button onmouseover="document.getElementById('p').style.color='orange'"
+    onmouseout="func()">clcik me</button> 
+    <button id="btn">Click me</button> 
+        <button onmousedown="func()">Click me</button> 
+        <button id="btn">click me</button>
+    <script>
+        // document.getElementById("btn").addEventListener("click",()=>{
+        //    let p=document.createElement('p');
+        //    p.innerHTML="button clicked";
+        //    document.querySelector("body").appendChild(p);
+        //     btn.classList.add("bt");
+        // })
+        let fun=()=>{
+            document.querySelector("body").style.backgroundColor='orange';
+        }
+        function func(){
+            document.querySelector("#p").style.color='yellow';
+        }
+        let btn=document.getElementById("btn");
+        btn.addEventListener("mousedown",()=>{
+            let img=document.createElement("img");
+            img.setAttribute("src",'https://th.bing.com/th/id/OIP.0FFp5Eo-PScy7BT9IFKTCgHaLH?rs=1&pid=ImgDetMain');
+            document.querySelector("body").append(img);
+        })
+        btn.addEventListener("onchange",()=>{
+            let p=document.getElementById("p");
+            p.innerText=p.innerText+" Kakinada district ";
+            // document.querySelector("body").appendChild('p');
+        })
+
+    </script>
+</body>
+</html>
+
+-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="fname" id="fname">
+    <div id="output"></div>
+    <script>
+        var inp=document.querySelector("input");
+        // inp.addEventListener("change",(event)=>{
+        //     var inputValue = inp.value;
+        // var outputElement = document.getElementById("output");
+        // outputElement.textContent = "You typed: " + inputValue;
+        // });
+        // inp.addEventListener("keydown",()=>{
+        //     var value=inp.value;
+        //     var op=document.getElementById("output");
+        //     op.innerHTML=inp.value;
+        // });
+        function fun(){
+            document.querySelector("#output").textContent="Page Loaded Succesfully";
+            console.log("page loaded succesfully");
+            
+
+        }
+        window.onload=fun();
+
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1">Number1</label>
+    <input type="text" name="num1" id="num1"><br>
+    <label for="num2">Number2</label>
+    <input type="text" name="num2"id="num2"><br>
+    <button id="btn">Click me</button>
+<script>
+ 
+ btn.addEventListener("click",()=>{
+    let num1=Number(document.getElementById("num1").value);
+    let num2=Number(document.getElementById("num2").value);
+    // console.log(num1+num2);
+    // let p=document.createElement("p");
+    // p.innerHTML=num1+" + "+num2+" = "+(num1+num2);
+    // document.querySelector("body").appendChild(p);
+    try{
+        if(num2==0)throw ("divisble by 0 is not defined");
+        let p=document.createElement("p");
+    p.innerHTML=num1+" / "+num2+" = "+(num1/num2);
+    document.querySelector("body").appendChild(p);
+    }
+    catch(err){
+        // console.log(err);
+        let p=document.createElement("p");
+    p.innerHTML=err;
+    document.querySelector("body").appendChild(p);
+    }
+ })
+</script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter number</label><input type="text" name="num" id="num">
+   <button id="btn">click me</button> <p></p>
+</body>
+<script>
+    function factorial(num){
+        if(num===0 || num==1)return 1;
+        else return num*factorial(num-1);
+        // console.log()
+    }
+    function fibonacci(n){
+        if(n<=1)return n;
+        else return fibonacci(n-1)+fibonacci(n-2);
+    }
+    btn.addEventListener("click",()=>{
+
+  
+    let p=document.querySelector("p");
+    var num=parseInt(document.querySelector("input").value);
+    var res=factorial(num);
+    var res1=fibonacci(num);
+    console.log(num);
+    p.innerHTML="The factorial of given number is : "+res+"<br>"+ "tha fibonacci no at "+num+" is : "+res1;
+})
+</script>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function cc(cls){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             document.querySelector("body").style.backgroundColor=cls;
+        //         resolve("color chnaged");
+        //         },1000);
+             
+        //     });
+        // }
+        // async function fun(){
+        //     await cc("orange");
+        //     await cc("blue");
+        // }
+        // fun();
+
+
+        function print(){
+            document.write(new Date().toLocaleTimeString());
+        }
+        var intervalid=setInterval(print,1000);
+        setTimeout(()=>{
+            clearInterval(intervalid);
+        },20000);
+    </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+ <script>
+    const date=new Date();
+    date.
+    p.innerHTML=date.toLocaleTimeString();
+    p.innerHTML+="  "+date.toDateString()+" "+date.toLocaleDateString()+" "+date.getFullYear();
+ </script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>hai</p>
+    <script>
+        // let name = prompt("Enter ur name: ");
+        // document.write("Entered name is " + name + "<br>" + "Upper case is " + name.toUpperCase().trim() + " " + name);
+        let str = "ajay";
+        console.log(str);
+        // console.log(str.repeat(3));
+        // console.log(str.slice(-2));
+        console.log(str.trim());
+        console.log(str.replace("ajay", "akshay"));
+        let arr = new Array(5);
+        // let arr=[];
+        for (let i = 0; i < arr.length; i++) {
+            arr.unshift(i);
+        }
+        // arr.forEach((ele)=>{
+        // 	console.log(ele);
+        // 		})
+        console.log(arr);
+        for (let ele of arr) console.log(ele);
+
+
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">Roll no</label><input type="text"><br>
+    <p onmouseover="document.querySelector('label').innerHTML='ROLL'"
+    
+    onmouseout="document.querySelector('label').innerHTML='Roll no'">Priyanka</p>
+
+<div id="clock"></div>
+
+    <script>
+        
+        function updateTime() {
+        const id=    setInterval(()=>{
+
+        
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const ms=now.getMilliseconds();
+    const timeString = `${hours}:${minutes}:${seconds}:${ms}`;
+
+    // Update the time display on the webpage
+    document.getElementById('clock').innerText = timeString;
+},1);
+setTimeout(()=>{
+    clearInterval(id);
+},10000);
+
+        }
+updateTime();
+
+    //    function fun(){
+    //     let p=document.querySelector("#date");
+    //     let date=new Date();
+    //     p.innerHTML=date.toLocaleDateString();
+    //    }
+    </script>
+
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let arr=[1,2,3,4,5];
+    
+
+    </script>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Hai </h1>
+    <script>
+        let h = $("h1");
+        h.css('stytle', "background-color:red;color:yellow;")
+        h.html("OYYYYY");
+        // h.css('color', 'red');
+        h.css('font-size', '30px');
+    </script>
+</body>
+
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Hai </h1>
+    <label for="name">name </label>
+    <input type="text" name="" id="">
+    <button id="btn1">set value</button>
+    <button id="btn2">clear value</button>
+    <script>
+        $('#btn1').click(() => {
+            $('input').val("hai baba");
+        })
+        $('#btn2').click(() => {
+            $("input").val("");
+        })
+        // Selecting <h1> element
+        // let h = $("h1");
+        // // Applying CSS styles
+        // h.css('style', "background-color:red; color:yellow;");
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1" onclick="fun()">Hai Madam Speaker</p>
+    <img src="data:image/jpeg;base64,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"
+        alt="pam" width="100" height='100'>
+    <table>
+
+    </table>
+    <form action="" name="myform" id="id" onsubmit="fun(2)"> </form>
+
+    <input type="text" name="" id="">
+    <button>click me</button>
+
+    <script>
+        function fun() {
+            document.querySelector("button").addEventListener("click",()=>{
+                if (document.querySelector("input").value == "") {
+                    alert("Invalid input");
+                    return false;
+                }
+         
+            }
+               
+
+        };
+        // function fun() {
+        //     const date = new Date();
+        //     document.getElementById("p1").innerHTML = date;
+        // }
+        // const obj = { name: "ajay", age: 20 };
+        // console.log(Object.keys(obj).toString());
+        // let img = document.querySelector("img   ");
+        // let data = "";
+        // function table() {
+        //     for (i = 1; i <= 10; i++) {
+        //         data += `7 X ${i} = ${7 * i} </br>`;
+        //     }
+        // }
+        // img.addEventListener("mouseover", () => {
+        //     let td = document.createElement("td");
+        //     table();
+        //     td.innerHTML = data;
+        //     data = "";
+        //     document.querySelector("table").appendChild(td);
+        // })
+        // img.addEventListener("mouseout", () => {
+        //     document.querySelector("table").innerHTML = "";
+        // })
+        // document.querySelector("button").addEventListener('click', () => {
+        //     let num = parseInt(document.querySelector('input').value);
+        //     let data = "";
+        //     while (num > 1) {
+        //         let rem = Math.floor(num % 10);
+        //         data += rem;
+        //         num /= 10;
+        //     }
+
+
+        //     console.log(data);
+        // })
+        // let data = "ajay";
+        // for (let i = data.length - 1; i >= 0; i--) {
+        //     console.log(data[i]);
+        // }
+
+        // fun(ip);
+
+
+        // console.log(data);
+
+    </script>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Number Form</title>
+</head>
+<body>
+    <form id="rollNumberForm" onsubmit="return validateRollNumber()">
+        <label for="rollNumber">Enter your roll number (less than 10):</label>
+        <input type="number" id="rollNumber" name="rollNumber" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateRollNumber() {
+            // Get the roll number input field
+            let rollNumberInput = document.getElementById("rollNumber");
+
+            // Get the value entered by the user
+            let rollNumber = parseInt(rollNumberInput.value);
+
+            // Check if the roll number is less than 10
+            if (rollNumber >= 10) {
+                alert("Please enter a roll number less than 10.");
+                return false; // Prevent form submission
+            }
+
+            // Allow form submission if the roll number is less than 10
+            return true;
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <input type="text" name="number" id="number">
+        <button type="submit">click me</button>
+    </form>
+    <p onclick="fun()"> ch</p>
+    <script>
+        // function validation() {
+        //     let ip = document.querySelector("input");
+        //     let roll = parseInt(ip.value);
+        //     if (roll > 10) {
+        //         alert("enter the number <10");
+        //         return false;
+        //     }
+        //     return true;
+        // }
+        // const arr = new Array(5);
+        // arr[0] = 23;
+        // arr.forEach((ele) => {
+        //     console.log(ele);
+        // })
+        // let dat = "AjAy";
+        // // console.log(dat.reverse());
+        // let s = dat.toLowerCase();
+        // console.log(dat, s);
+        console.log(0 == '0');
+        console.log(0 === '0');
+        function fun() {
+            document.querySelector('p').innerHTML = Date();
+        }
+
+    </script>
+</body>
+
+</html>

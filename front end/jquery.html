@@ -1,0 +1,159 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" name="name" id="name">
+    <input type="submit" value="submit" id="btn" disabled="disabled">
+
+    <br>
+    <h1>LPU</h1>
+    <p>HEy there </p>
+    <button id="btn1">prepend</button>
+    <button id="btn2">Append</button>
+
+    <br>
+    <h1>Lovely professional university <p>India</p>
+    </h1>
+    <h2>punjab</h2>
+    <img src="https://th.bing.com/th/id/OIP.Q05K882H_QqdBl0DQLNdVwHaE6?rs=1&pid=ImgDetMain" width="100px"
+        height="100px"><br>
+    <a href="https://www.lpu.in/" id='lpu'>click</a>
+    <button id="b1">Text</button>
+    <button id="b2">HTML</button>
+    <button id="b3">ATTRIBUTE</button>
+
+    <br>
+    <div style="background-color: blue;">
+        <p>HAI</p>
+        <p>HELLO</p>
+        <p> LPU</p>
+    </div>
+    <button id="empty">Empty </button> 
+
+    <br>
+    <h2>LIST ITEMS</h2>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="addbtn">Add class</button>
+    <button id="togglebtn">Toggle class for Even</button>
+    <button id="removebtn">Remove class for all items</button>
+    <script>
+        $('#name').keyup(() => {
+            if ($("#name").val() != ' ') {
+                $('#btn').removeAttr('disabled');
+            }
+            else {
+                $('#btn').attr('disabled', 'disabled');
+            }
+        })
+        //br
+        $('#btn1').click(() => {
+            $('p').before("Hello");
+        })
+        $('#btn2').click(() => {
+            $('p').after("vizag");
+        })
+        //br
+        $(document).ready(() => {
+            $('#b1').click(() => {
+                alert($('h1').text());
+            })
+            $('#b2').click(() => {
+                alert($('h1').html());
+            })
+            $('#b3').click(() => {
+                alert($('#lpu').attr("href"));
+            })
+            $("img").click(() => {
+                alert($('#lpu').attr("href"));
+            })
+        })
+
+        //br
+        $(document).ready(() => {
+            $('#empty').click(() => {
+                $('div').empty();
+            })
+
+        })
+
+      //br
+      
+        
+            $("#addbtn").click(function(){
+                $("#list li:odd").addClass("highlight");
+            })
+            $("#togglebtn").click(function(){
+                $("#list li:even").toggleClass("highlight");
+            })
+            $("#removebtn").click(function(){
+                $("#list li").removeClass("highlight");
+            })
+    
+        //br
+
+        
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+            /* Hide the panel initially */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+</head>
+
+<body>
+
+
+    <div id="flip">click to slide down panel</div>
+    <div id="panel">HELLO WORLD</div>
+
+    <script>
+        $(document).ready(() => {
+            $('#flip').click(() => {
+                // $("#panel").slideDown("fast");
+                // $('#panel').slideUp() 
+                //in slide up intially the panel should not be null;
+                $('#panel').slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
