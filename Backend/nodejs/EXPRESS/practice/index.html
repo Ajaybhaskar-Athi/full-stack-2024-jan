@@ -1,0 +1,201 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHH8mepO4avVq5NJFuruMoqN02xAqm5Jk7IryH9iVuNw&s"
+        alt="IMG" onmouseover="displayTable()" onmouseout="hideTable()" ; ondblclick="displayTable()" ;>
+    <table>
+
+    </table>
+    <button id="btn">Hover Me</button>
+
+    <span>
+
+    </span>
+    <br>
+    <button id="btn2">Enter a number</button>
+    <p></p>
+
+    <script>
+        let table = document.querySelector("table");
+        let btn2 = document.querySelector("#btn2");
+
+        btn2.addEventListener("click", () => {
+            let num = Number(prompt('enter a number'));
+            reverse(num);
+        })
+        let rev = "";
+        function reverse(num) {
+            while (num >= 1) {
+                let rem = Math.floor(num % 10);
+                rev += rem;
+                num /= 10;
+            }
+            let p = document.querySelector("p");
+            p.innerHTML = "reverse of entered number is: " + rev;
+            rev = "";
+
+        }
+
+
+        function displayTable() {
+            for (let i = 1; i <= 10; i++) {
+                let td = document.createElement("tr");
+                td.innerHTML = "7 X " + i + " = " + (7 * i) + "<br>";
+                table.appendChild(td);
+
+            }
+
+        }
+        function hideTable() {
+            table.innerHTML = "";
+        }
+
+        let btn = document.querySelector("#btn");
+        let span = document.querySelector("span");
+        btn.addEventListener("mouseover", () => {
+            let name = "ajay<br>";
+            let res = "";
+            for (let i = 0; i < 5; i++)res += name;
+            span.innerHTML = res;
+        });
+
+
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Information</button>
+    <p></p>
+    <br>
+    <button id="btn2">ImageShow</button><br>
+    <button id="btn3">Data</button> <p id="p2"></p>
+    <br>
+    <script>
+        document.getElementById("btn1").addEventListener("click", (event) => {
+            let p = document.querySelector("p");
+            p.innerHTML = "<h3> Name: </h3> AjayBhaskar <br> <h3>Roll: </h3>12 <br><h3> Section:</h3>K22LQ <br>";
+
+        })
+        document.getElementById("btn2").addEventListener("click", () => {
+            document.body.style.backgroundColor = "orange";
+        })
+        document.getElementById("btn3").addEventListener("click",()=>{
+            function fact(num){
+if(num==0 || num==1)return 1;
+else return num*(num-1);
+            }
+            document.getElementById("p2").innerHTML=fact(5);
+        })
+    </script>
+</body>
+
+</html> -->
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiak94olEOrkSHnShhstxBdCK3Vvvjd_qz0Cj5segq5WZYz3HS');
+            
+        }
+    </style>
+</head>
+
+<body>
+<body>
+    
+
+</body>
+
+    <script>
+
+        // let arr1 = [1, 2, 3, 4];
+        // let arr2 = [5, 6, 7, 8];
+        // let merge = [];
+        // let len = Math.max(arr1.length, arr2.length);
+        // for (let i = 0; i < len; i++) {
+        //     if (i < arr1.length) merge.push(arr1[i]);
+        //     if (i < arr2.length) merge.push(arr2[i]);
+        // }
+        // console.log(merge);
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://trendytattle.com/wp-content/uploads/2018/02/Samantha-HD-Images-22.jpg" alt="sam">
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Home page</h1>
+    <h2></h2>
+    <nav>
+        <a href="/">Home page</a>
+        <a href="/about">about page</a>
+    </nav> -->
+
+
+    <nav>
+        <div class="site-title">
+
+            <a href="/"><h1>net ninjas</h1></a>
+            <p>A net ninja site</p>
+            
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+
+    </nav>
+        <div class="blogs content">
+            <h2>All bLOgs</h2>
+        </div>
+</body>
+</html>

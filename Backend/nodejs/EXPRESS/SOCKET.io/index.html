@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: red; */
+}
+    </style>
+</head>
+
+<body>
+    <h1>chatting</h1>
+    <input type="text" name="" id="msg" placeholder="Enter message">
+    <button >send</button>
+    <div>
+      
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+       
+        // function fun(){
+        //     const socket=io();
+        // }
+
+        const socket=io();
+        let ip=document.querySelector('input');
+        let btn=document.querySelector('button');
+      let div=document.querySelector('div');
+        btn.addEventListener('click',()=>{
+            const message=ip.value;
+            console.log(message);
+            socket.emit('user-msg',message);
+            let p=document.createElement('p');
+            p.innerHTML="Ajay: "+message;
+            div.appendChild(p);
+
+        })
+        // if a message is came from server just catch it
+        socket.on('message',(message)=>{
+            console.log(message);
+            let p=document.createElement('p');
+            p.innerHTML="chandu: "+message;
+            div.appendChild(p);
+        })
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        #chat-box {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 20px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-image: url('https://ajcanjusao.cloudimg.io/v7/https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png');
+        }
+
+        .message {
+            max-width: 80%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .user-message {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+        }
+
+        .other-message {
+            background-color: #EAEAEA;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chatting</h1>
+    <form id="name-form">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button type="submit">Start Chat</button>
+    </form>
+    <div id="chat-box"></div>
+    <input type="text" id="msg" placeholder="Enter message">
+    <button id="send-btn">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const chatBox = document.getElementById('chat-box');
+        const nameForm = document.getElementById('name-form');
+        const usernameInput = document.getElementById('username');
+        const msgInput = document.getElementById('msg');
+        const sendBtn = document.getElementById('send-btn');
+
+        let username = '';
+
+        nameForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form submission
+            username = usernameInput.value.trim();
+            if (username) {
+                nameForm.style.display = 'none';
+                msgInput.focus();
+                socket.emit('user-join', username);
+            }
+        });
+
+        sendBtn.addEventListener('click', () => {
+            const message = msgInput.value.trim();
+            if (message) {
+                socket.emit('user-msg', message);
+                displayMessage(username, message, true);
+                msgInput.value = '';
+            }
+        });
+
+        socket.on('message', ({ sender, message }) => {
+            displayMessage(sender, message, false);
+        });
+
+        function displayMessage(sender, message, isUser) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            p.classList.add('message');
+            if (isUser) {
+                p.classList.add('user-message');
+            } else {
+                p.classList.add('other-message');
+            }
+            chatBox.appendChild(p);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>
+ 
+
+
+ 

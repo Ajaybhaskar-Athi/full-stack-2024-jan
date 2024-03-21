@@ -129,19 +129,25 @@
 //     })
 // })
 
-var fs = require('fs');
-let arr = [1, 2, 3, 4];
-let strArr = JSON.stringify(arr);
-// let buff=Buffer.alloc(strArr.length);
-// buff.write(strArr,'utf8');
-// let buff=Buffer.from(strArr,'utf8');
-let buff = Buffer.from(arr.toString(), 'utf8');
-fs.writeFile("./nodejs/INT222/lecture/inp.txt", buff, (err) => {
-    if (err) return console.log("error in writing :" + err);
-    console.log("written succesful");
-})
-fs.readFile("./nodejs/INT222/lecture/inp.txt", 'utf8', (err, data) => {
-    if (err) return err;
-    // let str=JSON.parse(data);
-    console.log(data);
-})
+// var fs = require('fs');
+// let arr = [1, 2, 3, 4];
+// let strArr = JSON.stringify(arr);
+// // let buff=Buffer.alloc(strArr.length);
+// // buff.write(strArr,'utf8');
+// // let buff=Buffer.from(strArr,'utf8');
+// let buff = Buffer.from(arr.toString(), 'utf8');
+// fs.writeFile("./nodejs/INT222/lecture/inp.txt", buff, (err) => {
+//     if (err) return console.log("error in writing :" + err);
+//     console.log("written succesful");
+// })
+// fs.readFile("./nodejs/INT222/lecture/inp.txt", 'utf8', (err, data) => {
+//     if (err) return err;
+//     // let str=JSON.parse(data);
+//     console.log(data);
+// })
+const fs=require('fs');
+const http=require('http');
+http.createServer((req,res)=>{
+    res.write("hello");
+    res.end("oyy");
+}).listen(3000);
