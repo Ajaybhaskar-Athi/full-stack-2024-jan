@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">Name <br>
+    <input type="text">address <br>
+    <input type="text"> qualification <br> <br><br><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     $('input').hide();
+        // });
+
+        const person={
+            "name":"ajay",
+            "age":30,
+            "city":'vishakapatnam',
+            "email":'varahijanasena4@gmail.com',
+            'isEmployed':false,
+            'languages':['english',"telugu"],
+            "address":{
+                "streeet":'Vadlapudi Kurmanpalem',
+                "city":'gajuwaka',
+                "pincode":'533208'
+            }
+
+        };
+        document.write("<h2>address</h2>");
+        document.write(person.address+"<br><br>");
+        for(i in person.address){
+            document.write(person.address[i]+"<br>");
+        }
+        
+        document.write("<br> <h2>languages </h2>");
+        document.write(person.languages+"<br><br>");
+        for(let ele of person.languages){
+            document.write(ele+"<br>");
+        }
+
+
+        ///Stringify and parsing
+        var string=JSON.stringify(person);
+        const parsed=JSON.parse(string);
+        document.write("<br><br>"+string);
+        document.write("<br><br>"+parsed.name+" "+parsed.languages);
+    </script>
+</body>
+</html> 
+
