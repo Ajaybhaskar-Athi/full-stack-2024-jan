@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+
+    margin: 0;
+
+}
+
+.container {
+    display: flex;
+    /* now we get pictures in horizontal ,if u want vertical we can put .but our project is in horizontal */
+    width: 90vw;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    /* making flex value initially 0.5  */
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+//     top: 50%;
+// left:40%;
+// color: rgb(47, 21, 21);
+
+    margin: 0;
+    opacity: 0;
+    /* opacity 0 which makes heading invisible */
+}
+
+.panel.active {
+    flex: 5;
+    /* changing from 0.5 to 5 which makes picture larger  */
+
+}
+
+.panel.active h3 {
+    opacity: 1;
+    /* making visible the heading whn active */
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+
+    /* it makes that 4th and 5th image to be invisbe in screen */
+}
+
+
+
+
+//////////////////////////////////
+
+.part2{
+    display: inline-block;
+        // display: flex;    
+}
+.outer {
+
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 2px 2px 6px black;
+    // margin-left: 5px;
+    margin: 10px;
+    // margin-top: 10px;
+    transition-duration: 1s;
+    transition-timing-function: steps;
+
+
+}
+
+.outer:hover {
+    /* border-radius: 30%; */
+    height: 70vh;
+
+    /* transform: rotate(35deg);
+    /* transform: scale(2);*/
+    /* transform: skew(30deg); */
+    /* transform: translate(200px, 200px) skew(30deg) scale(2); */
+
+    /* height: 200vh; */
+
+
+}
+
+
+.box {
+
+    width: 100%;
+    height: 50%;
+    border-radius: 25px;
+    /* background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTPiCbz9bCODRkduro_PH7ILdYS146Pp7dP2LpLD-ED00V4CnZS'); */
+    background-size: cover;
+}
+
+
+
+.desc {
+    padding: 0 2px 0 2px;
+}
+
+h3::selection {
+    /* if u slect the text it wiill relflect */
+    color: red;
+}
+
+//////////////////////////////
+/// 
+.help-line-box {
+    // display: inline-block;
+    // display: flex;
+    background-color: #f7f7f7;
+    // padding: 20px;
+    // margin-left: 80px;
+    // margin-top: 20px;
+    // border-radius: 10px;
+    padding: 20px;
+    margin-left: 80px;
+    margin-top: 0px;
+    border-radius: 10px;
+  }
+  
+  .help-line-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .help-line-box p {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  textarea,
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+  /* You can add global styles to this file, and also import other style files */
+  :root {
+    --blue-1: #2242c2;
+    --blue-2: #0368ec;
+    --white: #fff;
+    --grey-1: #ededed;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(255, 255, 255, 0.277);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--blue-1); */
+    /* background-color: #2242c2 ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+ 
+
+
+
+
+  fa-icon {
+    color: #ffffff;
+  }
+  
+  .container {
+    width: 500px;
+    height: 80vh;
+    /* background-color: var(--blue-2); */
+    background-color: #4C52AD;
+    border-radius: 20px;
+    /* box-shadow: 10px 10px 10px var(--shadow-dark); */
+    box-shadow: 10px 10px 10px   rgba(0, 0, 0, 0.3);
+  
+    margin-top: 3rem;
+  }
+  
+  .upper-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 20px;
+  }
+  
+  .lower-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upper-data img {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    /* margin: 0; */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--shadow-dark);
+     */
+     background-color:  rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location {
+    /* color: var(--white); */
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  .temperature {
+    /* color: var(--white); */
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900;
+  }
+  
+  .more-info-label {
+    /* color: var(--white); */
+    color:white;
+    font-size: 1.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .more-info-container {
+    flex: 1;
+    /* background-color: var(--shadow-dark); */
+    /* background-color:   rgba(0, 0, 0, 0.3); */
+    background-color: rgba(255,255,255,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .info-block {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .info-block-label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-block-label span {
+    /* color: var(--white); */
+    color: #fff;
+    font-size: 0.8em;
+    margin-top: 0.4em;
+  }
+  
+  .info-block-value {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* color: var(--white); */
+    color: #fff;
+  }
+  .wholeBox{
+    background-color:
+#918D83;
+  }
+  </style>
+  
+</head>
+<body>
+  
+<!-- ************************************* -->
+
+
+
+<div class="wholeBox">
+
+
+<div class="container" *ngIf="skysightDatasInput">
+ 
+  <div class="upper-data">
+    <img
+      src="../../../../../assets/sun.jpg"
+      *ngIf="skysightDatasInput.main.temp > 15"
+    />
+    <img
+      src="../../../../../assets/cold1.jpg"
+      *ngIf="skysightDatasInput.main.temp <= 15"
+    />
+
+    <div class="weather-data">
+      <div class="location">{{ skysightDatasInput.name }}</div>
+      <div class="temperature">
+        {{ skysightDatasInput.main.temp | number : "1.0-0" }}ºC
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">More Information</div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
+          <span>Min</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.temp_min | number : "1.0-0" }} ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperatureIcon"></fa-icon>
+          <span>Max</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.temp_max| number : "1.0-0" }} ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidityIcon"></fa-icon>
+          <span>Humidity</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.humidity }}%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>Wind</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.wind.speed }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+<!-- 
+
+<div class="container" *ngIf="skysightDatasInput">
+ 
+  <div class="upper-data">
+    <img
+      src="../../../../../assets/sun.jpg"
+      *ngIf="skysightDatasInput.main.temp > 15"
+    />
+    <img
+      src="../../../../../assets/cold1.jpg"
+      *ngIf="skysightDatasInput.main.temp <= 15"
+    />
+
+    <div class="weather-data">
+      <div class="location">{{ skysightDatasInput.name }}</div>
+      <div class="temperature">
+        {{ skysightDatasInput.main.temp | number : "1.0-0" }}ºC
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">More Information</div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
+          <span>Min</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.temp_min | number : "1.0-0" }} ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperatureIcon"></fa-icon>
+          <span>Max</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.temp_max| number : "1.0-0" }} ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidityIcon"></fa-icon>
+          <span>Humidity</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.main.humidity }}%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>Wind</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ skysightDatasInput.wind.speed }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

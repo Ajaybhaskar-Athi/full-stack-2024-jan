@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .wholeBox{
+      background-color: 
+#918D83;
+     padding-top: 10px;
+     padding-bottom: 10px;
+    } 
+
+.search input {
+  background-color: var(--shadow-dark);
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  /* color: #fff; */
+  color: black;
+  font-size: 0.8em;
+  text-align: center;
+  width: 30%;
+}
+.search-icon {
+  margin-left: 1em;
+}
+
+body{
+  background-color: 
+#918D83;
+}
+  </style>
+</head>
+<body>
+  
+
+<div class="wholeBox">  
+
+
+  <div class="search">
+    <form #form="ngForm">
+      <input
+        type="text"
+        placeholder=""
+        name="city"
+        [(ngModel)]="initialCityName"
+      />
+  
+      <span (click)="onSubmit()">
+        <fa-icon
+          animation="fade"
+          style="--fa-animation-duration: 5s; cursor: pointer"
+          size="lg"
+          class="search-icon"
+          [icon]="searchIcon"
+        ></fa-icon>
+      </span>
+    </form>
+  </div>
+  <app-skysight-card *ngIf="skysightData" [skysightDatasInput]="skysightData"></app-skysight-card>
+
+  </div>
+  
+  <!-- </body> -->
+  
+</body>
+</html>
+
+<body>
+ 

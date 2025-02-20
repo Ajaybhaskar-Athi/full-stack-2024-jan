@@ -1,0 +1,120 @@
+body{
+    // background-color: red;
+}
+
+  #myNavbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar appears above other content */
+  }
+
+
+img{
+    background-size: cover;
+    height: 100%;
+}
+
+#img-space{
+    height: 100vh;
+    overflow: auto;
+    // background-color: yellow;
+}
+.part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 40vh;
+}
+//  .wmo img{
+//     width: 60%;
+//     margin-left: 47px;
+// }
+#wmo h5{
+    align-items: center;
+    padding-top: 0;
+    padding-left: 30px;
+}
+
+#phone{
+    position: relative;
+    top: 130px;
+    height: 70vh;
+}
+
+
+
+.part2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 100px;
+    align-items: center;
+    position: relative;
+    top: 300px;
+    height: 60vh; /* Adjust height as needed */
+}
+#video iframe{
+border: 2px solid #fff;
+border-radius: 10px;
+}
+#para{
+    padding-left: 30px;
+    padding-right: 170px;
+}
+
+.footer{
+  position: relative;
+  top: 350px;
+}
+.foote{
+    display: flex;
+    position: relative;
+    top: 40vh;
+    background-color: #E4E1DA;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.column{
+    margin-left: 40px;
+    // height: ;
+    padding-left: 30px;
+}
+
+
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
